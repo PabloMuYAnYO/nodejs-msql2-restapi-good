@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.send(`<h1>Hola mundo desde express</h1>`)
 });
 
+router.get('/employees', function(req, res, next) {
+  res.send(`<h1>Obteniendo empleados</h1>`)
+});
+
 module.exports = router;
