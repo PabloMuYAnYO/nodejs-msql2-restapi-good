@@ -1,10 +1,13 @@
+const { application } = require('express');
 const express = require('express');
 const router = express.Router();
+const pool = require('../db.js');
+const employeesRoutes = require('./employees')
 
 /* GET home page. */
 router.get('/ping', function(req, res, next) {
   const result = pool.query('SELECT 1 + 1 AS result');
-  res.json(result);
+  res.json(result[0]);
 });
 
 router.get('/', function(req, res, next) {
@@ -12,17 +15,6 @@ router.get('/', function(req, res, next) {
   res.send(`<h1>Hola mundo desde express</h1>`);
 });
 
-router.get('/employees', function(req, res, next) {
-  res.send(`<h1>Obteniendo empleados...</h1>`);
-});
-router.post('/employees', function(req, res, next) {
-  res.send(`<h1>Creando empleados...</h1>`);
-});
-router.put('/employees', function(req, res, next) {
-  res.send(`<h1>Actualizando empleados...</h1>`);
-});
-router.delete('/employees', function(req, res, next) {
-  res.send(`<h1>Eliminando empleados...</h1>`);
-});
+router.use(employeesRoutes)
 
 module.exports = router;

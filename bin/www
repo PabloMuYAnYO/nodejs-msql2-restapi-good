@@ -7,6 +7,7 @@
 const app = require('../app');
 const debug = require('debug')('nodejs-mysql2-restapi-good:server');
 const http = require('http');
+const colors = require('colors');
 
 /**
  * Get port from environment and store in Express.
