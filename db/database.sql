@@ -9,9 +9,9 @@ CREATE TABLE employee (
 );
 
 -- FOR EXAMPLE
-INSERT INTO employee VALUES;
+INSERT INTO employee(id_employee, employee_name, salary) VALUES
     (1,"Pepito", 4300),
-    (2,"Eugenia", 4900),
+	(2,"Eugenia", 4900),
     (3,"Javi", 1900),
-    (4"Ana", 5300),
+    (4,"Ana", 5300),
     (5,"Eugenia", 2500)
