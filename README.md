@@ -1,6 +1,6 @@
 # nodejs-mysql2-restapi-good
 
-> Una aplicación para aprender sobre nodejs con express y paquetes como mysql2, morgan, cookie-parser,...
+> Una aplicación para aprender sobre nodejs con express, sus rutas y paquetes como mysql2, morgan, cookie-parser,...
 
 ### Setup proyecto
 
