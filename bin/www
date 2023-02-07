@@ -25,7 +25,7 @@ const server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
+console.log(`${debug.namespace}`.bgGreen);
 console.log(`Server on port: ${port}`.blue);
 server.listen(port);
 server.on('error', onError);
